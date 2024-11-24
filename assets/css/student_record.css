@@ -1,0 +1,216 @@
+/*student record*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #172717;
+    color: #ffffff; /* White text */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 1px;
+    margin-top: 45px;
+    color: #f4f4f4;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px;
+    display: block;
+    background-color: #333333;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+    background-color: #00796b;
+}
+
+.logout-btn {
+    padding: 15px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #172717;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    height: 150px;
+    top: 0;
+    left: 250px; /* Sidebar width offset */
+    width: calc(100% - 250px); /* Take up full width minus the sidebar */
+    z-index: 999;
+}
+
+.navbar h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 35px;
+    padding-right: 210px;
+}
+
+.navbar img {
+    height: 135px;
+    position: fixed;
+    top: 5px;
+    right: 35px;
+    width: 180px;
+    background-color: white;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+header {
+    margin-bottom: 40px;
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Batch Buttons Section */
+.batch-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 75%;
+    margin-bottom: 80px;
+    margin-left: 125px;
+    padding-top: 155px;
+}
+
+.batch-btn {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.batch-btn:hover {
+    background-color: #004d40;
+}
+
+/* Action Buttons (Delete and Print) */
+.action-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+.delete-btn,
+.print-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn {
+    background-color: #e53935;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.print-btn {
+    background-color: #00796b;
+    color: white;
+}
+
+.print-btn:hover {
+    background-color: #004d40;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .batch-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar {
+        position: relative; /* Adjust for smaller screens */
+        width: 100%; /* Take full width */
+        height: auto; /* Adjust height */
+    }
+
+    .navbar img {
+        position: static; /* Change positioning */
+        margin: 10px auto; /* Center the logo */
+        display: block; /* Make it block element */
+    }
+}
